@@ -4,10 +4,11 @@ import com.project.user.application.model.LoginRequest;
 import com.project.user.application.model.RefreshTokenRequest;
 import com.project.user.application.model.RegisterRequest;
 import com.project.user.application.model.ResetPasswordRequest;
-import com.project.user.domain.*;
+import com.project.user.domain.iam.clients.ClientCredentialService;
+import com.project.user.domain.iam.users.*;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+
 import java.util.Map;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/users/iam")
+@RequestMapping("/api/iam/users")
 public class UserIamController {
 
   private final UserRegistrationService registrationService;

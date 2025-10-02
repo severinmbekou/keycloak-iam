@@ -1,8 +1,8 @@
 package com.project.user.application.rest;
 
-import com.project.user.domain.UserAccountService;
-import com.project.user.domain.UserQueryService;
-import com.project.user.domain.UserRoleService;
+import com.project.user.domain.iam.users.UserAccountService;
+import com.project.user.domain.iam.users.UserQueryService;
+import com.project.user.domain.iam.users.UserRoleService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
@@ -20,7 +20,7 @@ import java.util.Map;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/admin/iam")
+@RequestMapping("/api/iam/admin")
 @Tag(name = "Admin IAM", description = "Administrative Identity & Access Management")
 public class AdminIamController {
 

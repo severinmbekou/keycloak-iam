@@ -14,11 +14,12 @@ public class SecurityConfig {
     "/swagger-ui.html", "/swagger-ui/**", "/v3/api-docs/**", "/v3/api-docs", "/webjars/**"
   };
   private final String[] FREE_POST_URL = {
-    "/api/users/iam/register",
-    "/api/users/iam/logout",
-    "/api/users/iam/refresh-token",
-    "/api/users/iam/login",
-    "/api/users/iam/forgot-password"
+    "/api/iam/users/register",
+    "/api/iam/users/logout",
+    "/api/iam/users/refresh-token",
+    "/api/iam/users/login",
+    "/api/iam/users/forgot-password",
+    "/api/iam/token"
   };
 
   @Bean

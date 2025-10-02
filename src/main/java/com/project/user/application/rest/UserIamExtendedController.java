@@ -3,7 +3,11 @@ package com.project.user.application.rest;
 import com.project.user.application.model.ChangePasswordRequest;
 import com.project.user.application.model.UpdateUserProfileRequest;
 import com.project.user.application.model.UserProfileResponse;
-import com.project.user.domain.*;
+import com.project.user.domain.iam.TokenIntrospectionService;
+import com.project.user.domain.iam.users.UserEmailService;
+import com.project.user.domain.iam.users.UserProfileService;
+import com.project.user.domain.iam.users.UserProfileUpdateService;
+import com.project.user.domain.iam.users.UserSelfPasswordService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -14,7 +18,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/users/iam")
+@RequestMapping("/api/iam/users")
 @Tag(name = "Extended IAM", description = "Advanced Identity & Access Management for users")
 public class UserIamExtendedController {
 
